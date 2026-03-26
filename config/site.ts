@@ -1,0 +1,77 @@
+export const siteConfig = {
+  name: "The Leap Pakistan",
+  shortName: "Leap Pakistan",
+  description:
+    "A premium leadership, youth, education, and corporate development platform in Pakistan and a subsidiary of The Aseer Group.",
+  url: "https://theleappakistan.com",
+  ogImage:
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+  logoPath: "/icon/LEAP PAKISTAN LOGO-01.svg",
+  parentGroup: "The Aseer Group",
+  contact: {
+    email: "hello@theleappakistan.com",
+    phone: "+92 300 0000000",
+    whatsapp: "https://wa.me/923000000000",
+    address: "Lahore, Pakistan",
+  },
+  social: {
+    facebook: "https://facebook.com/theleappakistan",
+    instagram: "https://instagram.com/theleappakistan",
+    linkedin: "https://linkedin.com/company/theleappakistan",
+    youtube: "https://youtube.com/@theleappakistan",
+    x: "https://x.com/theleappakistan",
+  },
+  inquiryCategories: [
+    "Youth leadership programmes",
+    "Corporate training",
+    "Education partnerships",
+    "Events and activations",
+    "Speaking and advisory",
+    "General inquiry",
+  ],
+  nav: [
+    { title: "Home", href: "/" },
+    { title: "Services", href: "/services" },
+    { title: "Events", href: "/events" },
+    { title: "People", href: "/people" },
+    { title: "Gallery", href: "/gallery" },
+    {
+      title: "About",
+      href: "/about",
+      children: [
+        { title: "The Company", href: "/about/company" },
+        { title: "The Founder", href: "/about/founder" },
+        { title: "Core Team", href: "/about/core-team" },
+        { title: "Story", href: "/about/story" },
+        { title: "Our Patrons", href: "/about/patrons" },
+        { title: "Our Brand", href: "/about/brand" },
+      ],
+    },
+    { title: "Alumni", href: "/alumni" },
+    { title: "Contact", href: "/contact" },
+  ],
+  footerLinks: {
+    company: [
+      { title: "About", href: "/about" },
+      { title: "Services", href: "/services" },
+      { title: "Events", href: "/events" },
+      { title: "People", href: "/people" },
+      { title: "Gallery", href: "/gallery" },
+      { title: "Alumni", href: "/alumni" },
+    ],
+    about: [
+      { title: "The Company", href: "/about/company" },
+      { title: "The Founder", href: "/about/founder" },
+      { title: "Core Team", href: "/about/core-team" },
+      { title: "Story", href: "/about/story" },
+      { title: "Our Patrons", href: "/about/patrons" },
+      { title: "Our Brand", href: "/about/brand" },
+    ],
+    legal: [
+      { title: "Privacy Policy", href: "/privacy-policy" },
+      { title: "Terms and Conditions", href: "/terms-and-conditions" },
+      { title: "Cookie Policy", href: "/cookie-policy" },
+      { title: "Accessibility", href: "/accessibility" },
+    ],
+  },
+};

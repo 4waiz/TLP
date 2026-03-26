@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 36 38% 98%;
+  --foreground: 215 26% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 26% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 26% 14%;
+  --primary: 210 83% 27%;
+  --primary-foreground: 36 38% 98%;
+  --secondary: 39 89% 44%;
+  --secondary-foreground: 210 83% 15%;
+  --muted: 35 29% 91%;
+  --muted-foreground: 215 12% 38%;
+  --accent: 160 68% 36%;
+  --accent-foreground: 36 38% 98%;
+  --destructive: 0 64% 42%;
+  --destructive-foreground: 36 38% 98%;
+  --border: 210 21% 88%;
+  --input: 210 21% 88%;
+  --ring: 210 83% 27%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(212, 144, 10, 0.1), transparent 25%),
+    radial-gradient(circle at 90% 5%, rgba(29, 158, 117, 0.08), transparent 22%),
+    linear-gradient(180deg, #fcf9f3 0%, #f8f5ee 42%, #ffffff 100%);
+  color: hsl(var(--foreground));
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(12, 68, 124, 0.14);
+  color: #0c447c;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section-space {
+  @apply py-16 md:py-24;
+}
+
+.surface-card {
+  @apply rounded-[1.75rem] border border-white/60 bg-white/85 shadow-soft backdrop-blur;
+}
+
+.luxury-panel {
+  @apply overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-luxe backdrop-blur;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-brand-navy/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-brand-navy/80;
+}
+
+.display-title {
+  @apply font-display text-4xl leading-[0.92] text-brand-charcoal md:text-6xl lg:text-7xl;
+}
+
+.grid-fade {
+  background-size: 52px 52px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
