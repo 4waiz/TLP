@@ -26,6 +26,7 @@ export function ServiceCard({
           alt={image.alt}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
+          style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
@@ -73,6 +74,7 @@ export function EventCard({
           alt={image.alt}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
+          style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
@@ -111,12 +113,13 @@ export function PersonCard({
 }) {
   return (
     <article className="group surface-card h-full overflow-hidden">
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-80 overflow-hidden md:h-96">
         <Image
           src={image.src}
           alt={image.alt}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
+          style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 25vw"
         />
       </div>
@@ -152,6 +155,7 @@ export function AlumniCard({
           alt={image.alt}
           fill
           className="object-cover"
+          style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>

@@ -40,6 +40,7 @@ export function PageHero({
             alt={image.alt}
             fill
             className="object-cover"
+            style={{ objectPosition: image.position ?? "center" }}
             sizes="(max-width: 1024px) 100vw, 45vw"
             priority
           />

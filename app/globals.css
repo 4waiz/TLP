@@ -51,28 +51,30 @@ body {
   text-wrap: balance;
 }
 
-.section-space {
-  @apply py-16 md:py-24;
-}
+@layer components {
+  .section-space {
+    @apply py-16 md:py-24;
+  }
 
-.surface-card {
-  @apply rounded-[1.75rem] border border-white/60 bg-white/85 shadow-soft backdrop-blur;
-}
+  .surface-card {
+    @apply rounded-[1.75rem] border border-white/60 bg-white/85 shadow-soft backdrop-blur;
+  }
 
-.luxury-panel {
-  @apply overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-luxe backdrop-blur;
-}
+  .luxury-panel {
+    @apply overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-luxe backdrop-blur;
+  }
 
-.eyebrow {
-  @apply inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-brand-navy/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-brand-navy/80;
-}
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-brand-navy/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-brand-navy/80;
+  }
 
-.display-title {
-  @apply font-display text-4xl leading-[0.92] text-brand-charcoal md:text-6xl lg:text-7xl;
-}
+  .display-title {
+    @apply font-display text-4xl leading-[0.92] text-brand-charcoal md:text-6xl lg:text-7xl;
+  }
 
-.grid-fade {
-  background-size: 52px 52px;
+  .grid-fade {
+    background-size: 52px 52px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

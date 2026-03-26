@@ -32,6 +32,7 @@ export function ParallaxCard({
         alt={image.alt}
         fill
         className="object-cover transition-transform duration-700 hover:scale-105"
+        style={{ objectPosition: image.position ?? "center" }}
         sizes="(max-width: 768px) 100vw, 40vw"
       />
     </motion.div>
