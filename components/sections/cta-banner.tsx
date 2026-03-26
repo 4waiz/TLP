@@ -22,15 +22,15 @@ export function CtaBanner({
       <div className="container">
         <div className="luxury-panel overflow-hidden bg-brand-navy text-white">
           <div className="grid gap-10 p-8 md:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
-            <div>
+            <div className="min-w-0">
               <p className="eyebrow border-white/15 bg-white/10 text-white/85">
                 Let&apos;s build the next step
               </p>
-              <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
+              <h2 className="mt-6 max-w-[12ch] font-display text-4xl leading-tight text-balance md:text-5xl">
                 {title}
               </h2>
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-base leading-8 text-white/75 md:text-lg">
                 {description}
               </p>

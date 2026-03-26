@@ -36,7 +36,7 @@ export default function EventsPage() {
       <section className="section-space">
         <div className="container">
           <div className="luxury-panel grid gap-8 p-8 md:p-12 lg:grid-cols-[1.05fr_0.95fr]">
-            <div>
+            <div className="min-w-0">
               <p className="eyebrow">Featured event</p>
               <h2 className="mt-6 font-display text-4xl text-brand-charcoal md:text-5xl">
                 {featured.title}
@@ -56,9 +56,12 @@ export default function EventsPage() {
                 </Button>
               </div>
             </div>
-            <div className="grid gap-4">
+            <div className="grid min-w-0 gap-4">
               {featured.highlights.map((item) => (
-                <div key={item} className="surface-card p-6 text-sm leading-7 text-slate-600">
+                <div
+                  key={item}
+                  className="surface-card min-w-0 p-6 text-sm leading-7 text-slate-700"
+                >
                   {item}
                 </div>
               ))}

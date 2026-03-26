@@ -36,6 +36,7 @@ export default function FounderPage() {
                 alt={founder.image.alt}
                 fill
                 className="object-cover"
+                style={{ objectPosition: founder.image.position ?? "center" }}
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>

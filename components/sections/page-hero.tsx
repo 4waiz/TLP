@@ -21,7 +21,7 @@ export function PageHero({
   return (
     <section className="container pt-10">
       <div className="luxury-panel grid overflow-hidden lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="relative p-8 md:p-12 lg:p-16">
+        <div className="relative min-w-0 p-8 md:p-12 lg:p-16">
           <div className="absolute inset-0 bg-grid-fade grid-fade opacity-60" />
           <div className="relative z-10">
             {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
@@ -34,7 +34,7 @@ export function PageHero({
             </p>
           </div>
         </div>
-        <div className="relative min-h-[360px]">
+        <div className="relative min-h-[360px] min-w-0">
           <Image
             src={image.src}
             alt={image.alt}

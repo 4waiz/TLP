@@ -230,6 +230,7 @@ export default function HomePage() {
                   alt={founder.image.alt}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: founder.image.position ?? "center" }}
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
               </div>

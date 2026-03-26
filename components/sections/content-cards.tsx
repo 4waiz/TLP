@@ -165,7 +165,9 @@ export function AlumniCard({
         </p>
         <h3 className="mt-4 font-display text-3xl text-brand-charcoal">{name}</h3>
         <p className="mt-2 text-sm text-slate-500">{city}</p>
-        <p className="mt-4 text-sm leading-7 text-slate-600">“{quote}”</p>
+        <p className="mt-4 text-sm leading-7 text-slate-600">
+          &ldquo;{quote}&rdquo;
+        </p>
       </div>
     </article>
   );
