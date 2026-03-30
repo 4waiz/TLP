@@ -6,14 +6,14 @@ export type MediaAsset = {
 
 export const media = {
   heroMain: {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
-    alt: "Young leaders in discussion during a workshop session.",
-    position: "center 38%",
+    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80",
+    alt: "Engaged participants in a leadership training workshop.",
+    position: "center 30%",
   },
   heroSecondary: {
-    src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    alt: "A facilitator guiding a collaborative youth development exercise.",
-    position: "center 35%",
+    src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
+    alt: "Professional mentoring and collaboration in a development session.",
+    position: "center 40%",
   },
   youthProgram: {
     src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
