@@ -65,7 +65,7 @@ body {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-brand-navy/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-brand-navy/80;
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-brand-navy/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-brand-navy/80;
   }
 
   .display-title {
@@ -74,6 +74,19 @@ body {
 
   .grid-fade {
     background-size: 52px 52px;
+  }
+
+  .color-bar {
+    @apply h-1.5 w-full rounded-full;
+    background: linear-gradient(90deg, #D4900A 0%, #1D9E75 40%, #0C447C 70%, #791F1F 100%);
+  }
+
+  .accent-dot {
+    @apply inline-block h-2.5 w-2.5 rounded-full;
+  }
+
+  .event-title {
+    @apply font-funky text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl;
   }
 }
 

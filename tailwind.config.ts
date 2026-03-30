@@ -51,6 +51,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-manrope)"],
         display: ["var(--font-cormorant)"],
+        funky: ["var(--font-space)"],
       },
       backgroundImage: {
         "grid-fade":

@@ -22,6 +22,11 @@ export const metadata = buildMetadata({
 
 export default function EventsPage() {
   const featured = events[0];
+  const accentColors = [
+    "bg-brand-emerald",
+    "bg-brand-gold",
+    "bg-brand-burgundy",
+  ];
 
   return (
     <main>
@@ -37,14 +42,15 @@ export default function EventsPage() {
         <div className="container">
           <div className="luxury-panel grid gap-8 p-8 md:p-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="min-w-0">
-              <p className="eyebrow">Featured event</p>
-              <h2 className="mt-6 font-display text-4xl text-brand-charcoal md:text-5xl">
+              <p className="eyebrow border-brand-emerald/20 bg-brand-emerald/10 text-brand-emerald">Featured event</p>
+              <div className="color-bar mt-6" />
+              <h2 className="mt-6 event-title text-brand-charcoal">
                 {featured.title}
               </h2>
-              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-brand-gold">
+              <p className="mt-4 text-sm font-bold uppercase tracking-[0.22em] text-brand-burgundy">
                 {formatDate(featured.date)} • {featured.city}
               </p>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600">
+              <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-slate-600">
                 {featured.overview}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -57,10 +63,18 @@ export default function EventsPage() {
               </div>
             </div>
             <div className="grid min-w-0 gap-4">
-              {featured.highlights.map((item) => (
+              {featured.highlights.map((item, index) => (
                 <div
                   key={item}
-                  className="surface-card min-w-0 p-6 text-sm leading-7 text-slate-700"
+                  className="surface-card min-w-0 border-l-4 p-6 text-sm font-medium leading-7 text-slate-700"
+                  style={{
+                    borderLeftColor:
+                      index % 3 === 0
+                        ? "#1D9E75"
+                        : index % 3 === 1
+                          ? "#D4900A"
+                          : "#791F1F",
+                  }}
                 >
                   {item}
                 </div>
@@ -72,11 +86,15 @@ export default function EventsPage() {
 
       <section className="section-space bg-white/70">
         <div className="container">
-          <SectionHeading
-            eyebrow="Upcoming and featured"
-            title="Explore the current event lineup."
-            description="Each format is designed for a distinct audience, with room for custom partnerships, registrations, and private adaptations."
-          />
+          <div className="mb-4">
+            <p className="eyebrow border-brand-burgundy/20 bg-brand-burgundy/10 text-brand-burgundy">Upcoming and featured</p>
+            <h2 className="mt-5 event-title text-brand-charcoal">
+              Explore the current event lineup.
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+              Each format is designed for a distinct audience, with room for custom partnerships, registrations, and private adaptations.
+            </p>
+          </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {events.map((event, index) => (
               <Reveal key={event.slug} delay={index * 0.06}>
@@ -89,11 +107,15 @@ export default function EventsPage() {
 
       <section className="section-space">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionHeading
-            eyebrow="Event FAQs"
-            title="Planning to attend, partner, or register a group?"
-            description="These are the most common questions we receive when organisations and participants are considering a Leap Pakistan event."
-          />
+          <div className="max-w-3xl">
+            <p className="eyebrow border-brand-gold/20 bg-brand-gold/10 text-brand-gold">Event FAQs</p>
+            <h2 className="mt-5 event-title text-brand-charcoal">
+              Planning to attend, partner, or register a group?
+            </h2>
+            <p className="mt-4 text-base leading-8 text-slate-600 md:text-lg">
+              These are the most common questions we receive when organisations and participants are considering a Leap Pakistan event.
+            </p>
+          </div>
           <FaqList items={eventFaqs} />
         </div>
       </section>

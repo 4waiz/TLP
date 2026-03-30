@@ -19,7 +19,7 @@ export function ServiceCard({
   bullets: string[];
 }) {
   return (
-    <article className="group luxury-panel flex h-full flex-col">
+    <article className="group luxury-panel flex h-full flex-col transition-shadow duration-300 hover:shadow-luxe">
       <div className="relative h-64 overflow-hidden">
         <Image
           src={image.src}
@@ -29,17 +29,29 @@ export function ServiceCard({
           style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-navy/30 to-transparent" />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.26em] text-brand-gold">
+        <div className="color-bar mb-4" />
+        <p className="text-xs font-bold uppercase tracking-[0.26em] text-brand-emerald">
           {eyebrow}
         </p>
-        <h3 className="mt-4 font-display text-3xl text-brand-charcoal">{title}</h3>
+        <h3 className="mt-4 font-display text-3xl font-bold text-brand-charcoal">{title}</h3>
         <p className="mt-3 text-sm leading-7 text-slate-600">{description}</p>
         <ul className="mt-5 space-y-3 text-sm text-slate-700">
-          {bullets.map((bullet) => (
+          {bullets.map((bullet, index) => (
             <li key={bullet} className="flex items-start gap-3">
-              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-emerald" />
+              <span
+                className="mt-2 h-2 w-2 rounded-full"
+                style={{
+                  backgroundColor:
+                    index % 3 === 0
+                      ? "#1D9E75"
+                      : index % 3 === 1
+                        ? "#D4900A"
+                        : "#791F1F",
+                }}
+              />
               <span>{bullet}</span>
             </li>
           ))}
@@ -67,7 +79,7 @@ export function EventCard({
   slug: string;
 }) {
   return (
-    <article className="group luxury-panel overflow-hidden">
+    <article className="group luxury-panel overflow-hidden transition-shadow duration-300 hover:shadow-luxe">
       <div className="relative h-72">
         <Image
           src={image.src}
@@ -77,19 +89,21 @@ export function EventCard({
           style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-navy/40 to-transparent" />
       </div>
       <div className="p-6">
+        <div className="color-bar mb-4" />
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="eyebrow">{type}</p>
-          <p className="text-sm font-medium text-slate-500">{date}</p>
+          <p className="eyebrow border-brand-emerald/20 bg-brand-emerald/10 text-brand-emerald">{type}</p>
+          <p className="text-sm font-bold text-brand-burgundy">{date}</p>
         </div>
-        <h3 className="mt-5 font-display text-3xl text-brand-charcoal">{title}</h3>
-        <p className="mt-3 flex items-center gap-2 text-sm text-slate-500">
-          <MapPin className="h-4 w-4 text-brand-gold" />
+        <h3 className="mt-5 font-funky text-2xl font-bold tracking-tight text-brand-charcoal md:text-3xl">{title}</h3>
+        <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-brand-navy">
+          <MapPin className="h-4 w-4 text-brand-emerald" />
           {city}
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600">{excerpt}</p>
-        <Button asChild variant="outline" className="mt-6">
+        <Button asChild variant="secondary" className="mt-6">
           <Link href={`/events/${slug}`}>
             Explore event
             <ArrowUpRight className="h-4 w-4" />
@@ -112,7 +126,7 @@ export function PersonCard({
   image: MediaAsset;
 }) {
   return (
-    <article className="group surface-card h-full overflow-hidden">
+    <article className="group surface-card h-full overflow-hidden transition-shadow duration-300 hover:shadow-luxe">
       <div className="relative h-80 overflow-hidden md:h-96">
         <Image
           src={image.src}
@@ -122,10 +136,12 @@ export function PersonCard({
           style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 25vw"
         />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-navy/30 to-transparent" />
       </div>
       <div className="p-6">
-        <h3 className="font-display text-3xl text-brand-charcoal">{name}</h3>
-        <p className="mt-2 text-sm font-semibold uppercase tracking-[0.24em] text-brand-gold">
+        <div className="mb-3 h-1 w-12 rounded-full bg-brand-emerald" />
+        <h3 className="font-display text-3xl font-bold text-brand-charcoal">{name}</h3>
+        <p className="mt-2 text-sm font-semibold uppercase tracking-[0.24em] text-brand-burgundy">
           {role}
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600">{bio}</p>
@@ -148,23 +164,25 @@ export function AlumniCard({
   image: MediaAsset;
 }) {
   return (
-    <article className="luxury-panel overflow-hidden">
+    <article className="luxury-panel overflow-hidden transition-shadow duration-300 hover:shadow-luxe">
       <div className="relative h-72">
         <Image
           src={image.src}
           alt={image.alt}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-700 hover:scale-105"
           style={{ objectPosition: image.position ?? "center" }}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-burgundy/30 to-transparent" />
       </div>
       <div className="p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.26em] text-brand-emerald">
+        <div className="mb-3 h-1 w-10 rounded-full bg-brand-burgundy" />
+        <p className="text-xs font-bold uppercase tracking-[0.26em] text-brand-emerald">
           {track}
         </p>
-        <h3 className="mt-4 font-display text-3xl text-brand-charcoal">{name}</h3>
-        <p className="mt-2 text-sm text-slate-500">{city}</p>
+        <h3 className="mt-4 font-display text-3xl font-bold text-brand-charcoal">{name}</h3>
+        <p className="mt-2 text-sm font-semibold text-brand-navy">{city}</p>
         <p className="mt-4 text-sm leading-7 text-slate-600">
           &ldquo;{quote}&rdquo;
         </p>

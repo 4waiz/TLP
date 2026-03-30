@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope, Space_Grotesk } from "next/font/google";
 
 import "@/app/globals.css";
 
@@ -14,6 +14,12 @@ const manrope = Manrope({
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -67,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${manrope.variable} ${cormorant.variable} bg-background font-sans text-foreground antialiased`}
+        className={`${manrope.variable} ${cormorant.variable} ${spaceGrotesk.variable} bg-background font-sans text-foreground antialiased`}
       >
         {children}
       </body>

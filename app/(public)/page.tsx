@@ -39,8 +39,12 @@ export default function HomePage() {
           <div className="grid gap-12 p-8 md:p-12 lg:grid-cols-[1.05fr_0.95fr] lg:p-16">
             <Reveal className="relative">
               <p className="eyebrow">Leadership that feels current, credible, and alive</p>
-              <h1 className="mt-7 display-title text-balance">
-                Building the next generation of leaders, teams, and learning experiences in Pakistan.
+              <h1 className="mt-7 display-title text-balance font-bold">
+                Building the next generation of{" "}
+                <span className="text-brand-burgundy">leaders</span>,{" "}
+                <span className="text-brand-emerald">teams</span>, and{" "}
+                <span className="text-brand-burgundy">learning experiences</span>{" "}
+                in Pakistan.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 The Leap Pakistan is a subsidiary of {siteConfig.parentGroup},
@@ -107,25 +111,29 @@ export default function HomePage() {
                   title: "Subsidiary strength",
                   description:
                     "The Leap Pakistan sits within The Aseer Group, giving the brand a wider foundation for quality, partnerships, and long-term thinking.",
+                  color: "#D4900A",
                 },
                 {
                   title: "Experience-led design",
                   description:
                     "Programmes are shaped as complete journeys with facilitation, visual discipline, environment, storytelling, and purposeful follow-through.",
+                  color: "#1D9E75",
                 },
                 {
                   title: "Cross-sector relevance",
                   description:
                     "From campus halls to boardrooms, we design language and formats that land with the audience in front of us.",
+                  color: "#791F1F",
                 },
                 {
                   title: "Mission with polish",
                   description:
                     "The work remains inspirational without becoming vague, and professional without becoming cold or generic.",
+                  color: "#0C447C",
                 },
               ].map((item) => (
-                <div key={item.title} className="surface-card p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-gold">
+                <div key={item.title} className="surface-card border-l-4 p-6" style={{ borderLeftColor: item.color }}>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em]" style={{ color: item.color }}>
                     {item.title}
                   </p>
                   <p className="mt-4 text-sm leading-7 text-slate-600">

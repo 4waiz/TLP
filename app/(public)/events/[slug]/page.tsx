@@ -62,38 +62,49 @@ export default async function EventDetailPage({ params }: Props) {
         <div className="container grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-6">
             <div className="surface-card p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <div className="color-bar mb-6" />
+              <p className="font-funky text-sm font-bold uppercase tracking-[0.24em] text-brand-emerald">
                 Event snapshot
               </p>
               <div className="mt-6 grid gap-4 text-sm leading-7 text-slate-600 md:grid-cols-2">
                 <p>
-                  <span className="font-semibold text-brand-charcoal">Date:</span>{" "}
+                  <span className="font-bold text-brand-burgundy">Date:</span>{" "}
                   {formatDate(event.date)}
                 </p>
                 <p>
-                  <span className="font-semibold text-brand-charcoal">City:</span>{" "}
+                  <span className="font-bold text-brand-burgundy">City:</span>{" "}
                   {event.city}
                 </p>
                 <p>
-                  <span className="font-semibold text-brand-charcoal">Venue:</span>{" "}
+                  <span className="font-bold text-brand-burgundy">Venue:</span>{" "}
                   {event.venue}
                 </p>
                 <p>
-                  <span className="font-semibold text-brand-charcoal">Format:</span>{" "}
+                  <span className="font-bold text-brand-burgundy">Format:</span>{" "}
                   {event.type}
                 </p>
               </div>
             </div>
             <div className="surface-card p-8">
-              <SectionHeading
-                eyebrow="Highlights"
-                title="Designed to create momentum in the room."
-              />
+              <p className="eyebrow border-brand-emerald/20 bg-brand-emerald/10 text-brand-emerald">Highlights</p>
+              <h2 className="mt-5 event-title text-brand-charcoal">
+                Designed to create momentum in the room.
+              </h2>
               <ul className="mt-6 space-y-4 text-sm leading-7 text-slate-600">
-                {event.highlights.map((item) => (
+                {event.highlights.map((item, index) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-emerald" />
-                    <span>{item}</span>
+                    <span
+                      className="mt-2 h-2.5 w-2.5 rounded-full"
+                      style={{
+                        backgroundColor:
+                          index % 3 === 0
+                            ? "#1D9E75"
+                            : index % 3 === 1
+                              ? "#D4900A"
+                              : "#791F1F",
+                      }}
+                    />
+                    <span className="font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
