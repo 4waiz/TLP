@@ -20,10 +20,10 @@ export function CtaBanner({
   return (
     <section className="section-space">
       <div className="container">
-        <div className="luxury-panel overflow-hidden bg-brand-navy text-white">
+        <div className="luxury-panel overflow-hidden bg-brand-navy text-white" style={{ backgroundImage: "radial-gradient(circle at 10% 90%, rgba(29,158,117,0.25), transparent 40%), radial-gradient(circle at 90% 10%, rgba(212,144,10,0.2), transparent 40%)" }}>
           <div className="grid gap-10 p-8 md:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
             <div className="min-w-0">
-              <p className="eyebrow border-white/15 bg-white/10 text-white/85">
+              <p className="eyebrow border-brand-gold/30 bg-brand-gold/15 text-brand-gold">
                 Let&apos;s build the next step
               </p>
               <h2 className="mt-6 max-w-[12ch] font-display text-4xl leading-tight text-balance md:text-5xl">

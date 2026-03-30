@@ -44,7 +44,7 @@ export function PageHero({
             sizes="(max-width: 1024px) 100vw, 45vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/25 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/30 via-brand-emerald/5 to-transparent" />
         </div>
       </div>
     </section>
