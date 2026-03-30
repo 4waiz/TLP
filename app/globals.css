@@ -69,7 +69,7 @@ body {
   }
 
   .display-title {
-    @apply font-display text-4xl leading-[0.92] text-brand-charcoal md:text-6xl lg:text-7xl;
+    @apply font-display text-4xl font-bold leading-[0.92] text-brand-charcoal md:text-6xl lg:text-7xl;
   }
 
   .grid-fade {

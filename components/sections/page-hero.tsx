@@ -26,7 +26,7 @@ export function PageHero({
           <div className="relative z-10">
             {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
             <p className="eyebrow">{eyebrow}</p>
-            <h1 className="mt-6 font-display text-5xl leading-[0.95] text-brand-charcoal md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[0.95] text-brand-charcoal md:text-6xl lg:text-7xl">
               {title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
