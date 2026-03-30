@@ -45,16 +45,18 @@ export default function FounderPage() {
             <SectionHeading
               eyebrow={founder.role}
               title={founder.name}
-              description="A founder vision centered on dignity, direction, and well-designed growth experiences."
+              description="Empowering young Pakistanis to discover, explore, and fall in love with their homeland."
             />
             <div className="surface-card p-8 text-base leading-8 text-slate-600">
               <p>{founder.bio}</p>
               <p className="mt-5">{founder.extended}</p>
               <p className="mt-5">
-                The founder&apos;s continuing role is to ensure that The Leap
-                Pakistan remains both ambitious and disciplined: future-facing
-                in its outlook, grounded in substance, and committed to
-                experiences that genuinely help people move.
+                Today, with over 80 satisfied deals completed across Pakistan,
+                The Leap Pakistan stands as a testament to what happens when
+                experience meets purpose. Under Aseer&apos;s leadership, the
+                company continues to redefine what local travel looks like —
+                making it smoother, more memorable, and more accessible for
+                every young Pakistani ready to take that leap.
               </p>
             </div>
           </div>
