@@ -118,7 +118,7 @@ export function HeroHome() {
 
         {/* Pillar pills */}
         <motion.div
-          {...fadeUp(0.65)}
+          {...fadeUp(0.55)}
           className="mt-10 flex flex-wrap justify-center gap-3 md:mt-12"
         >
           {pillars.map((pillar) => (
