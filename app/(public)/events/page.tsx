@@ -118,37 +118,6 @@ export default function EventsPage() {
                     );
                   })}
 
-                  {/* Registration option shells */}
-                  <div className="mt-2 grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-brand-gold/30 bg-brand-gold/10 p-5 backdrop-blur-sm">
-                      <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 text-brand-gold" />
-                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">Self Funded</span>
-                      </div>
-                      <p className="mt-3 font-display text-2xl font-extrabold text-white">$15</p>
-                      <p className="text-xs text-white/60">Registration fee</p>
-                      <div className="mt-4">
-                        <span className="inline-flex items-center gap-1 rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-bold text-brand-gold">
-                          <Ticket className="h-3 w-3" />
-                          Available
-                        </span>
-                      </div>
-                    </div>
-                    <div className="rounded-2xl border border-brand-emerald/30 bg-brand-emerald/10 p-5 backdrop-blur-sm">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-brand-emerald" />
-                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">Fully Funded</span>
-                      </div>
-                      <p className="mt-3 font-display text-2xl font-extrabold text-white">$10</p>
-                      <p className="text-xs text-white/60">Registration fee</p>
-                      <div className="mt-4">
-                        <span className="inline-flex items-center gap-1 rounded-full bg-brand-emerald/20 px-3 py-1 text-xs font-bold text-brand-emerald">
-                          <Ticket className="h-3 w-3" />
-                          Available
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 

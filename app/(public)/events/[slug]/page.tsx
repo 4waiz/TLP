@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Calendar, MapPin, Building, Tag, Users, Ticket, CheckCircle } from "lucide-react";
+import { Calendar, MapPin, Building, Tag, CheckCircle } from "lucide-react";
 
 import { EventRegistrationForm } from "@/components/forms/event-registration-form";
 import { EventCard } from "@/components/sections/content-cards";
@@ -116,43 +116,6 @@ export default async function EventDetailPage({ params }: Props) {
               </ul>
             </div>
 
-            {/* Registration option shells */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.5rem] border-2 border-brand-gold/25 bg-brand-gold/8 p-6 transition-all duration-300 hover:shadow-brand-gold hover:-translate-y-0.5">
-                <div className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-brand-gold" />
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">Self Funded</span>
-                </div>
-                <p className="mt-3 font-display text-3xl font-extrabold text-brand-charcoal">$15</p>
-                <p className="text-sm text-slate-500">Registration fee</p>
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-brand-gold/15 px-3 py-1 text-xs font-bold text-brand-gold">
-                    <Ticket className="h-3 w-3" />
-                    Available
-                  </span>
-                </div>
-                <Button variant="secondary" className="mt-4 w-full" disabled>
-                  Register as Self Funded
-                </Button>
-              </div>
-              <div className="rounded-[1.5rem] border-2 border-brand-emerald/25 bg-brand-emerald/8 p-6 transition-all duration-300 hover:shadow-soft hover:-translate-y-0.5">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-emerald" />
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">Fully Funded</span>
-                </div>
-                <p className="mt-3 font-display text-3xl font-extrabold text-brand-charcoal">$10</p>
-                <p className="text-sm text-slate-500">Registration fee</p>
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-brand-emerald/15 px-3 py-1 text-xs font-bold text-brand-emerald">
-                    <Ticket className="h-3 w-3" />
-                    Available
-                  </span>
-                </div>
-                <Button variant="emerald" className="mt-4 w-full" disabled>
-                  Register as Fully Funded
-                </Button>
-              </div>
-            </div>
           </div>
 
           <div className="luxury-panel p-8 md:p-10">
