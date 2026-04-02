@@ -46,11 +46,11 @@ export function HeroHome() {
       {/* Full-screen background image with parallax */}
       <motion.div className="absolute inset-0" style={{ scale: imgScale, y: imgY }}>
         <Image
-          src={media.heroMain.src}
-          alt={media.heroMain.alt}
+          src="/icon/hero.jpeg"
+          alt="Pakistani mountain landscape representing The Leap Pakistan."
           fill
           className="object-cover"
-          style={{ objectPosition: media.heroMain.position ?? "center" }}
+          style={{ objectPosition: "center" }}
           sizes="100vw"
           priority
         />
@@ -74,17 +74,9 @@ export function HeroHome() {
         {/* Spacer for header */}
         <div className="h-24" />
 
-        {/* Eyebrow */}
-        <motion.div {...fadeUp(0.1)}>
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.3em] text-white/90 backdrop-blur-sm">
-            <span className="h-2 w-2 rounded-full bg-brand-gold animate-pulse-glow" />
-            Now shaping Pakistan&apos;s leadership landscape
-          </span>
-        </motion.div>
-
         {/* Main heading */}
         <motion.h1
-          {...fadeUp(0.25)}
+          {...fadeUp(0.15)}
           className="mx-auto mt-8 max-w-5xl font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
         >
           Every step is{" "}
@@ -96,7 +88,7 @@ export function HeroHome() {
 
         {/* Subtitle */}
         <motion.p
-          {...fadeUp(0.4)}
+          {...fadeUp(0.3)}
           className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg md:mt-8 md:text-xl"
         >
           The Leap Pakistan builds premium youth programmes, education partnerships,
@@ -105,7 +97,7 @@ export function HeroHome() {
 
         {/* CTAs */}
         <motion.div
-          {...fadeUp(0.55)}
+          {...fadeUp(0.45)}
           className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10"
         >
           <Button asChild size="lg" variant="secondary" className="shadow-brand-gold">
