@@ -52,8 +52,12 @@ export default function ContactPage() {
                   <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
                 </p>
                 <p>
-                  <span className="font-semibold text-brand-charcoal">Phone:</span>{" "}
+                  <span className="font-semibold text-brand-charcoal">Mobile/WhatsApp:</span>{" "}
                   <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phone}</a>
+                </p>
+                <p>
+                  <span className="font-semibold text-brand-charcoal">PTCL:</span>{" "}
+                  <a href={`tel:${siteConfig.contact.ptcl}`}>{siteConfig.contact.ptcl}</a>
                 </p>
                 <p>
                   <span className="font-semibold text-brand-charcoal">Location:</span>{" "}

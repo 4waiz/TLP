@@ -61,6 +61,10 @@ export function SiteFooter() {
                 <Phone className="h-4 w-4 text-brand-gold" />
                 <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phone}</a>
               </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-brand-gold" />
+                <span>PTCL: {siteConfig.contact.ptcl}</span>
+              </div>
             </div>
             <div className="mt-6 flex items-center gap-3">
               {socialLinks.map(({ href, icon: Icon, label }) => (

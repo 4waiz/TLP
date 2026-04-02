@@ -3,11 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
-import { ParallaxCard } from "@/components/motion/parallax-card";
 import {
   AlumniCard,
   EventCard,
-  PersonCard,
   ServiceCard,
 } from "@/components/sections/content-cards";
 import { CtaBanner } from "@/components/sections/cta-banner";
@@ -15,11 +13,9 @@ import { HeroHome } from "@/components/sections/hero-home";
 import { ImpactStrip } from "@/components/sections/impact-strip";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
 import { media } from "@/config/site-media";
 import { alumniStories } from "@/data/alumni";
 import { events } from "@/data/events";
-import { founder, coreTeam } from "@/data/people";
 import { deliveryMetrics, differentiators } from "@/data/site-content";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/metadata";
@@ -188,56 +184,6 @@ export default function HomePage() {
                 />
               </Reveal>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* People */}
-      <section className="section-space">
-        <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <div className="surface-card overflow-hidden">
-              <div className="relative h-[520px]">
-                <Image
-                  src={founder.image.src}
-                  alt={founder.image.alt}
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: founder.image.position ?? "center" }}
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent" />
-              </div>
-              <div className="p-8">
-                <p className="badge-gold">
-                  Founder spotlight
-                </p>
-                <h3 className="mt-4 font-display text-3xl font-bold text-brand-charcoal">
-                  {founder.name}
-                </h3>
-                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.22em] text-brand-navy/75">
-                  {founder.role}
-                </p>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{founder.bio}</p>
-                <Button asChild variant="outline" className="mt-6">
-                  <Link href="/about/founder">Read the founder story</Link>
-                </Button>
-              </div>
-            </div>
-          </Reveal>
-          <div>
-            <SectionHeading
-              eyebrow="People and leadership"
-              title="A team shaping ambitious experiences with clarity and care."
-              description="The Leap Pakistan brings together programme design, partnerships, brand storytelling, and facilitation under one contemporary platform."
-            />
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {coreTeam.slice(0, 4).map((person, index) => (
-                <Reveal key={person.name} delay={index * 0.07}>
-                  <PersonCard {...person} />
-                </Reveal>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -9,10 +9,11 @@ export const siteConfig = {
   logoPath: "/icon/LEAP PAKISTAN LOGO-01.svg",
   parentGroup: "The Aseer Group",
   contact: {
-    email: "hello@theleappakistan.com",
-    phone: "+92 300 0000000",
-    whatsapp: "https://wa.me/923000000000",
-    address: "Lahore, Pakistan",
+    email: "theleappakistan@gmail.com",
+    phone: "+92 310 5850362",
+    ptcl: "051-5452836",
+    whatsapp: "https://wa.me/923105850362",
+    address: "Office No. 106, 1st Floor, Makkah Heights, H-13, Islamabad, 44790",
   },
   social: {
     facebook: "https://facebook.com/theleappakistan",
