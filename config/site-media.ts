@@ -6,9 +6,9 @@ export type MediaAsset = {
 
 export const media = {
   heroMain: {
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80",
-    alt: "Engaged participants in a leadership training workshop.",
-    position: "center 30%",
+    src: "https://images.unsplash.com/photo-1586076860891-068e98858710?auto=format&fit=crop&w=2000&q=80",
+    alt: "Scenic mountain landscape of northern Pakistan with lush valleys.",
+    position: "center 40%",
   },
   heroSecondary: {
     src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
