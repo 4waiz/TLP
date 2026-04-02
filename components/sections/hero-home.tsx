@@ -7,7 +7,6 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 
 import { Button } from "@/components/ui/button";
-import { media } from "@/config/site-media";
 
 const pillars = [
   { label: "Youth leadership", href: "/services" },
@@ -137,7 +136,7 @@ export function HeroHome() {
 
         {/* Scroll indicator */}
         <motion.div
-          {...fadeUp(0.8)}
+          {...fadeUp(0.65)}
           className="mb-8 flex flex-col items-center gap-2"
         >
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-white/40">
