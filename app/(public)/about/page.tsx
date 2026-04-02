@@ -43,7 +43,7 @@ export default function AboutPage() {
                   className="group surface-card flex h-full flex-col justify-between p-8 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div>
-                    <h2 className="font-display text-3xl text-brand-charcoal">
+                    <h2 className="font-display text-2xl font-bold text-brand-charcoal">
                       {item.title}
                     </h2>
                     <p className="mt-4 text-sm leading-7 text-slate-600">
@@ -60,7 +60,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      <section className="section-space section-mist">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="Relationship to Aseer Group"

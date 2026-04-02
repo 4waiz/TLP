@@ -46,7 +46,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      <section className="section-space section-chalk">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionHeading
             eyebrow="How we deliver"
@@ -56,8 +56,8 @@ export default function ServicesPage() {
           <div className="grid gap-5">
             {servicePrinciples.map((principle, index) => (
               <Reveal key={principle.title} delay={index * 0.08}>
-                <div className="surface-card p-8">
-                  <h3 className="font-display text-3xl text-brand-charcoal">
+                <div className="surface-card border-l-4 p-8 transition-all duration-300 hover:shadow-luxe hover:-translate-y-0.5" style={{ borderLeftColor: ["#D4900A", "#1D9E75", "#0C447C", "#791F1F"][index % 4] }}>
+                  <h3 className="font-display text-xl font-bold text-brand-charcoal">
                     {principle.title}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-slate-600">
@@ -75,7 +75,7 @@ export default function ServicesPage() {
           <div className="luxury-panel grid gap-8 p-8 md:p-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="eyebrow">Engagement pathways</p>
-              <h2 className="mt-6 font-display text-4xl text-brand-charcoal md:text-5xl">
+              <h2 className="mt-6 font-display text-4xl font-extrabold tracking-tight text-brand-charcoal md:text-5xl">
                 Need a single workshop, a full retreat, or a multi-touch programme?
               </h2>
             </div>

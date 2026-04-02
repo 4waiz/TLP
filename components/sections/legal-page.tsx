@@ -29,7 +29,7 @@ export function LegalPage({ title, updated, intro, sections }: LegalPageProps) {
           <div className="mx-auto max-w-4xl space-y-8">
             {sections.map((section) => (
               <article key={section.heading} className="surface-card p-8">
-                <h2 className="font-display text-3xl text-brand-charcoal">
+                <h2 className="font-display text-2xl font-bold text-brand-charcoal">
                   {section.heading}
                 </h2>
                 <div className="mt-4 space-y-4 text-base leading-8 text-slate-600">

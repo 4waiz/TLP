@@ -30,7 +30,7 @@ export default function PeoplePage() {
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="max-w-3xl">
             <p className="eyebrow border-brand-emerald/20 bg-brand-emerald/10 text-brand-emerald">Founder</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-brand-charcoal md:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-brand-charcoal md:text-5xl">
               {founder.name}
             </h2>
             <p className="mt-4 text-base leading-8 text-brand-burgundy font-semibold md:text-lg">
@@ -47,11 +47,11 @@ export default function PeoplePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      <section className="section-space section-mist">
         <div className="container">
           <div className="max-w-3xl">
             <p className="eyebrow border-brand-gold/20 bg-brand-gold/10 text-brand-gold">Core team</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-brand-charcoal md:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-brand-charcoal md:text-5xl">
               Multidisciplinary leadership across programmes, partnerships, and story.
             </h2>
             <p className="mt-4 text-base leading-8 text-slate-600 md:text-lg">
@@ -73,7 +73,7 @@ export default function PeoplePage() {
         <div className="container">
           <div className="max-w-3xl">
             <p className="eyebrow border-brand-burgundy/20 bg-brand-burgundy/10 text-brand-burgundy">Our patrons</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-brand-charcoal md:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-brand-charcoal md:text-5xl">
               Trusted voices around the ecosystem.
             </h2>
             <p className="mt-4 text-base leading-8 text-slate-600 md:text-lg">

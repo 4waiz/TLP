@@ -43,7 +43,7 @@ export default function AlumniPage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      <section className="section-space section-chalk">
         <div className="container grid gap-6 md:grid-cols-3">
           {[
             "Photo-ready storytelling for future alumni spotlights",

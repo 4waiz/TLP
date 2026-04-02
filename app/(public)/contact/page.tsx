@@ -94,7 +94,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      <section className="section-space section-mist">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionHeading
             eyebrow="Frequently asked"

@@ -11,6 +11,7 @@ import {
   ServiceCard,
 } from "@/components/sections/content-cards";
 import { CtaBanner } from "@/components/sections/cta-banner";
+import { HeroHome } from "@/components/sections/hero-home";
 import { ImpactStrip } from "@/components/sections/impact-strip";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
@@ -34,67 +35,9 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <main>
-      <section className="container pt-10">
-        <div className="luxury-panel overflow-hidden">
-          <div className="grid gap-12 p-8 md:p-12 lg:grid-cols-[1.05fr_0.95fr] lg:p-16">
-            <Reveal className="relative">
-              <p className="eyebrow">Leadership that feels current, credible, and alive</p>
-              <h1 className="mt-7 display-title text-balance font-bold">
-                Building the next generation of{" "}
-                <span className="text-brand-burgundy">leaders</span>,{" "}
-                <span className="text-brand-emerald">teams</span>, and{" "}
-                <span className="text-brand-burgundy">learning experiences</span>{" "}
-                in Pakistan.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                The Leap Pakistan is a subsidiary of {siteConfig.parentGroup},
-                created to shape youth programmes, education partnerships,
-                corporate development, and event-led experiences with premium
-                design and real depth.
-              </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/contact">Plan your next programme</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="/services">Explore our services</Link>
-                </Button>
-              </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {[
-                  "Youth leadership",
-                  "Corporate growth",
-                  "Education partnerships",
-                ].map((label) => (
-                  <div
-                    key={label}
-                    className="rounded-[1.5rem] border border-brand-navy/10 bg-brand-chalk px-5 py-4 text-sm font-semibold text-brand-navy"
-                  >
-                    {label}
-                  </div>
-                ))}
-              </div>
-            </Reveal>
+      <HeroHome />
 
-            <Reveal delay={0.1} className="grid gap-4 lg:grid-cols-[0.7fr_0.3fr]">
-              <ParallaxCard image={media.heroMain} className="min-h-[520px]" />
-              <div className="grid gap-4">
-                <div className="surface-card p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                    Signature focus
-                  </p>
-                  <p className="mt-4 text-lg leading-8 text-slate-700">
-                    Designed for youth, institutions, and organisations ready to
-                    move beyond passive training into meaningful transformation.
-                  </p>
-                </div>
-                <ParallaxCard image={media.heroSecondary} className="min-h-[250px]" />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
+      {/* Brand positioning */}
       <section className="section-space">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
@@ -112,28 +55,39 @@ export default function HomePage() {
                   description:
                     "The Leap Pakistan sits within The Aseer Group, giving the brand a wider foundation for quality, partnerships, and long-term thinking.",
                   color: "#D4900A",
+                  bg: "bg-brand-gold/8",
                 },
                 {
                   title: "Experience-led design",
                   description:
                     "Programmes are shaped as complete journeys with facilitation, visual discipline, environment, storytelling, and purposeful follow-through.",
                   color: "#1D9E75",
+                  bg: "bg-brand-emerald/8",
                 },
                 {
                   title: "Cross-sector relevance",
                   description:
                     "From campus halls to boardrooms, we design language and formats that land with the audience in front of us.",
                   color: "#791F1F",
+                  bg: "bg-brand-burgundy/8",
                 },
                 {
                   title: "Mission with polish",
                   description:
                     "The work remains inspirational without becoming vague, and professional without becoming cold or generic.",
                   color: "#0C447C",
+                  bg: "bg-brand-navy/6",
                 },
               ].map((item) => (
-                <div key={item.title} className="surface-card border-l-4 p-6" style={{ borderLeftColor: item.color }}>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em]" style={{ color: item.color }}>
+                <div
+                  key={item.title}
+                  className={`surface-card border-l-4 p-6 transition-all duration-300 hover:shadow-luxe hover:-translate-y-1 ${item.bg}`}
+                  style={{ borderLeftColor: item.color }}
+                >
+                  <p
+                    className="font-display text-sm font-bold uppercase tracking-[0.22em]"
+                    style={{ color: item.color }}
+                  >
                     {item.title}
                   </p>
                   <p className="mt-4 text-sm leading-7 text-slate-600">
@@ -146,7 +100,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/60">
+      {/* Services */}
+      <section className="section-space section-chalk">
         <div className="container">
           <SectionHeading
             eyebrow="What we do"
@@ -165,6 +120,7 @@ export default function HomePage() {
 
       <ImpactStrip items={deliveryMetrics} />
 
+      {/* Why choose us */}
       <section className="section-space">
         <div className="container grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
           <Reveal>
@@ -177,30 +133,38 @@ export default function HomePage() {
             </div>
           </Reveal>
           <div className="grid gap-5">
-            {differentiators.map((item, index) => (
-              <Reveal key={item.title} delay={index * 0.08}>
-                <div className="surface-card p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 rounded-full bg-brand-navy/5 p-3">
-                      <Sparkles className="h-5 w-5 text-brand-gold" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-3xl text-brand-charcoal">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-                        {item.description}
-                      </p>
+            {differentiators.map((item, index) => {
+              const colors = ["#D4900A", "#1D9E75", "#0C447C", "#791F1F"];
+              const color = colors[index % colors.length];
+              return (
+                <Reveal key={item.title} delay={index * 0.08}>
+                  <div className="surface-card border-l-4 p-8 transition-all duration-300 hover:shadow-luxe hover:-translate-y-0.5" style={{ borderLeftColor: color }}>
+                    <div className="flex items-start gap-4">
+                      <div
+                        className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl"
+                        style={{ backgroundColor: `${color}15` }}
+                      >
+                        <Sparkles className="h-5 w-5" style={{ color }} />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-xl font-bold text-brand-charcoal">
+                          {item.title}
+                        </h3>
+                        <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      {/* Upcoming events */}
+      <section className="section-space section-mist">
         <div className="container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -208,7 +172,7 @@ export default function HomePage() {
               title="Moments that create visibility, energy, and real engagement."
               description="Preview selected event formats and flagship experiences currently featured within the platform."
             />
-            <Button asChild variant="outline">
+            <Button asChild variant="default">
               <Link href="/events">
                 View all events
                 <ArrowRight className="h-4 w-4" />
@@ -228,6 +192,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* People */}
       <section className="section-space">
         <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
@@ -241,12 +206,13 @@ export default function HomePage() {
                   style={{ objectPosition: founder.image.position ?? "center" }}
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent" />
               </div>
               <div className="p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <p className="badge-gold">
                   Founder spotlight
                 </p>
-                <h3 className="mt-4 font-display text-4xl text-brand-charcoal">
+                <h3 className="mt-4 font-display text-3xl font-bold text-brand-charcoal">
                   {founder.name}
                 </h3>
                 <p className="mt-2 text-sm font-semibold uppercase tracking-[0.22em] text-brand-navy/75">
@@ -276,7 +242,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/70">
+      {/* Alumni */}
+      <section className="section-space section-chalk">
         <div className="container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -284,7 +251,7 @@ export default function HomePage() {
               title="Stories from participants who kept moving."
               description="Our alumni experience is designed to extend beyond one event or one cohort, helping people stay connected to growth and one another."
             />
-            <Button asChild variant="outline">
+            <Button asChild variant="default">
               <Link href="/alumni">Visit alumni stories</Link>
             </Button>
           </div>
@@ -298,6 +265,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gallery */}
       <section className="section-space">
         <div className="container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -314,14 +282,15 @@ export default function HomePage() {
             {[media.gallery1, media.gallery2, media.gallery3, media.gallery6].map(
               (image, index) => (
                 <Reveal key={image.src} delay={index * 0.07}>
-                  <div className="relative h-72 overflow-hidden rounded-[1.75rem]">
+                  <div className="group relative h-72 overflow-hidden rounded-[1.75rem]">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
-                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </div>
                 </Reveal>
               ),

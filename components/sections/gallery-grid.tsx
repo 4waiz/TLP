@@ -111,7 +111,7 @@ export function GalleryGrid({
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-gold">
                     {activeItem.category}
                   </p>
-                  <h3 className="mt-3 font-display text-4xl text-white">
+                  <h3 className="mt-3 font-display text-4xl font-bold text-white">
                     {activeItem.title}
                   </h3>
                 </div>

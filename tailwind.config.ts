@@ -47,10 +47,12 @@ const config: Config = {
       boxShadow: {
         soft: "0 20px 80px rgba(12, 68, 124, 0.08)",
         luxe: "0 28px 120px rgba(27, 36, 48, 0.16)",
+        "brand-gold": "0 12px 40px rgba(212, 144, 10, 0.25)",
+        "brand-navy": "0 12px 40px rgba(12, 68, 124, 0.2)",
       },
       fontFamily: {
         sans: ["var(--font-manrope)"],
-        display: ["var(--font-cormorant)"],
+        display: ["var(--font-sora)"],
         funky: ["var(--font-space)"],
       },
       backgroundImage: {
@@ -68,10 +70,20 @@ const config: Config = {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(12px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
         float: "float 6s ease-in-out infinite",
         shimmer: "shimmer 4s linear infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "slide-up": "slide-up 0.6s ease-out forwards",
       },
     },
   },

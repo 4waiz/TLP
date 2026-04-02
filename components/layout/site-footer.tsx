@@ -23,7 +23,7 @@ const socialLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-brand-navy/10 bg-brand-charcoal text-white">
+    <footer className="mt-24 border-t border-brand-navy/10 bg-brand-charcoal text-white" style={{ backgroundImage: "radial-gradient(circle at 10% 90%, rgba(212,144,10,0.06), transparent 40%), radial-gradient(circle at 90% 10%, rgba(29,158,117,0.05), transparent 40%)" }}>
       <div className="container py-16">
         <div className="grid gap-12 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr]">
           <div>
