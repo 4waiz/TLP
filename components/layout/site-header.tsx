@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -28,6 +29,9 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* On home page + not scrolled: transparent glass over the hero image */
+  const heroMode = isHome && !scrolled;
+
   return (
     <header className="sticky top-0 z-50 px-3 pt-3">
       <div
@@ -35,7 +39,9 @@ export function SiteHeader() {
           "mx-auto max-w-[1440px] rounded-[1.75rem] border transition-all duration-300",
           scrolled
             ? "border-brand-navy/10 bg-white/85 shadow-soft backdrop-blur-xl"
-            : "border-white/60 bg-white/70 backdrop-blur-lg",
+            : heroMode
+              ? "border-white/10 bg-white/5 backdrop-blur-md"
+              : "border-white/60 bg-white/70 backdrop-blur-lg",
         )}
       >
         <div className="container flex h-20 items-center justify-between gap-4">
@@ -55,10 +61,18 @@ export function SiteHeader() {
               />
             </div>
             <div className="hidden sm:block">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-gold">
+              <p className={cn(
+                "text-sm font-semibold uppercase tracking-[0.28em]",
+                heroMode ? "text-brand-gold" : "text-brand-gold"
+              )}>
                 The Leap Pakistan
               </p>
-              <p className="text-xs text-slate-500">Subsidiary of The Aseer Group</p>
+              <p className={cn(
+                "text-xs",
+                heroMode ? "text-white/60" : "text-slate-500"
+              )}>
+                Subsidiary of The Aseer Group
+              </p>
             </div>
           </Link>
 
@@ -76,7 +90,9 @@ export function SiteHeader() {
                       "flex items-center gap-1 rounded-full px-4 py-3 text-sm font-semibold transition-colors",
                       pathname.startsWith("/about")
                         ? "bg-brand-navy text-white"
-                        : "text-slate-700 hover:bg-brand-navy/5 hover:text-brand-navy",
+                        : heroMode
+                          ? "text-white/90 hover:bg-white/10 hover:text-white"
+                          : "text-slate-700 hover:bg-brand-navy/5 hover:text-brand-navy",
                     )}
                     type="button"
                   >
@@ -120,7 +136,9 @@ export function SiteHeader() {
                     "rounded-full px-4 py-3 text-sm font-semibold transition-colors",
                     pathname === item.href
                       ? "bg-brand-navy text-white"
-                      : "text-slate-700 hover:bg-brand-navy/5 hover:text-brand-navy",
+                      : heroMode
+                        ? "text-white/90 hover:bg-white/10 hover:text-white"
+                        : "text-slate-700 hover:bg-brand-navy/5 hover:text-brand-navy",
                   )}
                 >
                   {item.title}
@@ -136,7 +154,12 @@ export function SiteHeader() {
           </div>
 
           <button
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-navy/10 text-brand-navy lg:hidden"
+            className={cn(
+              "inline-flex h-12 w-12 items-center justify-center rounded-full border lg:hidden",
+              heroMode
+                ? "border-white/20 text-white"
+                : "border-brand-navy/10 text-brand-navy",
+            )}
             type="button"
             onClick={() => setMobileOpen((value) => !value)}
             aria-label="Toggle menu"

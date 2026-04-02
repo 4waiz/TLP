@@ -1,4 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export function AnnouncementStrip() {
+  const pathname = usePathname();
+
+  /* Hide on the home page so the full-screen hero is uninterrupted */
+  if (pathname === "/") return null;
+
   return (
     <div
       className="border-b border-brand-navy/10 bg-brand-navy text-white"
