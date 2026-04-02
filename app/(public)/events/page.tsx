@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock, MapPin, Users, Ticket, CheckCircle } from "lucide-react";
+import { ArrowRight, Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
 import { EventCard } from "@/components/sections/content-cards";
