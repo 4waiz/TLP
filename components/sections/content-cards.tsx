@@ -79,8 +79,8 @@ export function EventCard({
   slug: string;
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft backdrop-blur transition-all duration-500 hover:shadow-luxe hover:-translate-y-2">
-      <div className="relative h-72 overflow-hidden">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft backdrop-blur transition-all duration-500 hover:shadow-luxe hover:-translate-y-2">
+      <div className="relative h-72 shrink-0 overflow-hidden">
         <Image
           src={image.src}
           alt={image.alt}
@@ -100,7 +100,7 @@ export function EventCard({
           <span className="badge-emerald">{type}</span>
         </div>
       </div>
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         <div className="color-bar-thick mb-5" />
         <h3 className="font-funky text-2xl font-bold tracking-tight text-brand-charcoal md:text-3xl">
           {title}
@@ -109,7 +109,7 @@ export function EventCard({
           <MapPin className="h-4 w-4 text-brand-emerald" />
           {city}
         </p>
-        <p className="mt-4 text-sm leading-7 text-slate-600">{excerpt}</p>
+        <p className="mt-4 flex-1 text-sm leading-7 text-slate-600">{excerpt}</p>
         <Button asChild variant="secondary" className="mt-6 w-full shadow-brand-gold">
           <Link href={`/events/${slug}`}>
             Explore event
