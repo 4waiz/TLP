@@ -43,20 +43,6 @@ export default function AlumniPage() {
         </div>
       </section>
 
-      <section className="section-space section-chalk">
-        <div className="container grid gap-6 md:grid-cols-3">
-          {[
-            "Photo-ready storytelling for future alumni spotlights",
-            "Cohort-specific follow-up and milestone features",
-            "Ongoing community touchpoints to sustain connection",
-          ].map((item) => (
-            <div key={item} className="surface-card p-6 text-sm leading-7 text-slate-600">
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
       <CtaBanner
         title="Want to design an experience people still talk about months later?"
         description="That is the standard we aim for. Let&apos;s shape something memorable, relevant, and worth carrying forward."
