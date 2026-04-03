@@ -6,8 +6,8 @@ export type MediaAsset = {
 
 export const media = {
   heroMain: {
-    src: "https://images.unsplash.com/photo-1586076860891-068e98858710?auto=format&fit=crop&w=2000&q=80",
-    alt: "Scenic mountain landscape of northern Pakistan with lush valleys.",
+    src: "/icon/hero.jpeg",
+    alt: "Pakistani mountain landscape representing The Leap Pakistan.",
     position: "center 40%",
   },
   heroSecondary: {
