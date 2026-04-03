@@ -146,7 +146,7 @@ export const media = {
     alt: "Audience applauding at an inspiring event.",
   },
   alumniHero: {
-    src: "https://images.unsplash.com/photo-1522202222206-b75074277110?auto=format&fit=crop&w=1600&q=80",
+    src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80",
     alt: "Young professionals connected through an alumni network gathering.",
   },
 } satisfies Record<string, MediaAsset>;
